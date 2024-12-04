@@ -3,12 +3,12 @@ const encrypt = require('../Utils/encrypt')
 
 const addUser = async (req,res) => {
      
-    const hash = await encrypt.encryptePassword(req.body.password)
+    // const hash = await encrypt.encryptePassword(req.body.password)
 
     const UserData = {
         name : req.body.name,
         email : req.body.email,
-        password : hash,
+        password :req.body.password,
         phone : req.body.phone,
         role : req.body.role
     }
